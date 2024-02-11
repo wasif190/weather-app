@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    text-align: center;
+    text-transform:uppercase;
+    padding-top: 20px;
+}
+
+/* ------------------------------------- Tab Container --------------------------------- */
+
+.tab-container {
+    width:90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+}
+
+
+.tab.current-tab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+/* -------------------- Grant Access Section --------------------------- */
+.grant-location-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display:none; 
+}
+
+.grant-location-container img {
+    margin-bottom: 1.2rem;
+}
+
+.grant-access-btn {
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+.grant-location-container button {
+    margin-top: 1.2rem;
+}
+
+.grant-location-container.active{
+   display:flex;
+}
+
+/* ----------------------------- Form Container ------------------------------ */
+
+.form-container {
+    width:90%;
+    max-width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;;
+    margin-top: 3rem;
+    display: none;
+}
+
+@media (max-width: 400px) {
+   .form-container input {
+        overflow-x: auto;
+   }
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form {
+    width: calc(100% - 80px);
+    padding: 5px 9px;
+    background-color:#dfe7f680;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-container input {
+    all:unset;
+    width: 100%;
+    margin-left: 10px;
+}
+
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-size: 1.1rem;
+    color: #626262;
+}
+
+/* -------------------------- Loading Container ----------------- */
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1px;
+    margin-top: 120px;
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+
+/* ------------------------- User Info Container------------------- */
+
+.user-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    display: none;
+}
+
+.user-info-container.active{
+    display: flex;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: 1.3rem;
+}
+
+.temp {
+    font-size: 1.7rem;
+    font-weight: 550;
+    margin-bottom: 1.4rem;
+}
+
+/* --------------------------------- Parameter Container ------------------------- */
+
+.parameter-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.parameter{
+    width: 150px;
+    background-color: #dbe2ef80;;
+    border-radius: 5px;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}   
+
+.parameter img{
+    width:50px;
+    height:50px;
+    margin-bottom: .4rem;
+}
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    display: none;
+}
+
+.not-found.active{
+    display: flex;
+}
+
+.not-found img {
+    width: 200px;
+    height: 200px;
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="images/weather-app.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- <script src="api-practice.js" defer></script> -->
+</head>
+<body>
+   <main class="wrapper">
+        <h1 class="title">Weather App</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+            <!-- Grant Location Section -->
+            <section class="grant-location-container">
+                <img src="images/location.png" width="75" loading="lazy">
+                <h2>Grant Location Access</h2>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="grant-access-btn" data-grantAccess>Grant Access</button>
+            </section>
+
+            <!-- Search Weather Form -->
+            <section class="form-container" data-searchForm>
+                <form class="form">
+                    <button class="search-btn btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+    
+                    <input placeholder="Search For City.." data-searchInput>
+    
+                    <button class="close-btn btn"> 
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Not Found -->
+            <section class="not-found">
+                <img src="images/not-found.png">
+                <h2>Not Found</h2>
+            </section>
+
+            <!-- Loading Screen Container -->
+            <section class="loading-container">
+                <img src="images/loading.gif" width="100">
+                <p>Loading</p>
+            </section>
+
+            <!-- Show Weather Information -->
+            <section class="user-info-container">
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon width="20">
+                </div>
+
+                <p data-weatherdDesc></p>
+                <img data-weatherIcon>
+                <p data-temp class="temp"></p>
+
+                <div class="parameter-container">
+                    <div class="parameter">
+                        <img src="images/wind.png">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <div class="parameter">
+                        <img src="images/humidity.png" >
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <div class="parameter">
+                        <img src="images/cloud.png" >
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+   </main>
+
+   <!-- Ion Icons -->
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
